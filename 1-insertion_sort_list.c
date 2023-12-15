@@ -1,8 +1,8 @@
 #include "sort.h"
 
 /**
- * len_list - calaculate length of linkedlis
- * @h: pointer to the head of list
+ * list_len - calaculate length of linkedlis
+ * @l: pointer to the head of list
  *
  * Return: length of linked list
  */
@@ -20,8 +20,9 @@ int list_len(listint_t *l)
 
 /**
  * swap - function to swaps 2 nodes in a DLL
- * @a: Pointer to the first node to swap
- * @b: pointer to the second node
+ * @nod1: Pointer to the first node to swap
+ * @nod2: pointer to the second node
+ * @list: double pointer ssign to head of DLL.
  *
  * Return: No return
  */
