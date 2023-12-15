@@ -52,8 +52,8 @@ int lomuto_partition(int *array, int low, int high, size_t size)
 /**
  * lomuto_sort - Function to sort partition recursevly
  * @array: address to array
- * @low: low index in array
- * @high: Last index in array
+ * @low_dx: low index in array
+ * @high_dx: Last index in array
  * @size: The size of array
  */
 void lomuto_sort(int *array, int low_dx, int high_dx, size_t size)
