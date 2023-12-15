@@ -34,17 +34,23 @@ int lomuto_partition(int *array, int low, int high, size_t size)
 	int val1 = low - 1;
 	int val2;
 
-	for (val2 = low; val2 <= high - 1; val2++)
+	for (val2 = low; val2 < high; val2++)
 	{
 		if (array[val2] < pvot)
 		{
 			val1++;
-			swap_int(&array[val1], &array[val2]);
-			print_array(array, size);
+			if (val1 != val2)
+			{
+				swap_int(&array[val1], &array[val2]);
+				print_array(array, size);
+			}
 		}
 	}
-	swap_int(&array[val1 + 1], &array[high]);
-	print_array(array, size);
+	if ((val1 + 1) != high)
+	{
+		swap_int(&array[val1 + 1], &array[high]);
+		print_array(array, size);
+	}
 
 	return (val1 + 1);
 }
