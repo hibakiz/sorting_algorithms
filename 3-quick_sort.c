@@ -36,7 +36,7 @@ int lomuto_partition(int *array, int low, int high, size_t size)
 
 	for (val2 = low; val2 < high; val2++)
 	{
-		if (array[val2] < pvot)
+		if (array[val2] <= pvot)
 		{
 			val1++;
 			if (val1 != val2)
