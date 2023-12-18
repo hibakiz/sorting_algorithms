@@ -48,9 +48,8 @@ int Horae_partition(int *array, int low, int high, size_t size)
 		print_array(array, size);
 	}
 }
-
 /**
- * Horae_sort - Function to sort partition recursevly
+ * horae_sort - Function to sort partition recursively
  * @array: address to array
  * @low_dx: low index in array
  * @high_dx: Last index in array
@@ -66,7 +65,6 @@ void horae_sort(int *array, int low_dx, int high_dx, size_t size)
 		horae_sort(array, pvot_index, high_dx, size);
 	}
 }
-
 /**
  * quick_sort_hoare - Function validate sorts array of integers ascendingly
  * @array: The array to be sorted
