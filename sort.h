@@ -29,5 +29,8 @@ void selection_sort(int *array, size_t size);
 int lomuto_partition(int *array, int low, int high, size_t size);
 void lomuto_sort(int *array, int low_dx, int high_dx, size_t size);
 void quick_sort(int *array, size_t size);
+void quick_sort_hoare(int *array, size_t size);
+void horae_sort(int *array, int low_dx, int high_dx, size_t size);
+int Horae_partition(int *array, int low, int high, size_t size);
 
 #endif
