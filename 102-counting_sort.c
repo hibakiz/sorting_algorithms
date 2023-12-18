@@ -1,5 +1,4 @@
 #include "sort.h"
-
 /**
  * counting_sort - function to sort integers array ascendingly.
  * @array: The array of integers to be sorted
@@ -14,7 +13,6 @@ void counting_sort(int *array, size_t size)
 	size_t j, tmp, val = 0;
 
 	result = malloc(sizeof(int) * size);
-
 	if (result == NULL)
 		return;
 	if (array == NULL || size < 2)
@@ -26,7 +24,6 @@ void counting_sort(int *array, size_t size)
 			max_val = array[j];
 	}
 	fre_array = malloc(sizeof(int) * (max_val + 1));
-
 	if (fre_array == NULL)
 	{
 		free(result);
