@@ -8,7 +8,7 @@
  */
 void counting_sort(int *array, size_t size)
 {
-	int i, max_val;
+	int i, max_val = 0;
 	int *fre_array = NULL, *result = NULL;
 	size_t j, tmp, val = 0;
 
@@ -17,7 +17,7 @@ void counting_sort(int *array, size_t size)
 		return;
 	if (array == NULL || size < 2)
 		return;
-	for (j = 0, max_val = 0; j < size; j++)
+	for (j = 0; j < size; j++)
 	{
 		result[j] = array[j];
 		if (array[j] > max_val)
