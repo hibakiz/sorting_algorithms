@@ -1,5 +1,5 @@
 #include "sort.h"
-
+void merge_sort_recursive_tdd(int *array, size_t size);
 /**
  * merge_sort - This function to sort ints in ascending order
  * @array: The array be sorte
@@ -12,38 +12,6 @@ void merge_sort(int *array, size_t size)
 
 	merge_sort_recursive_tdd(array, size);
 }
-
-/**
- * merge_sort_recursive_tdd - This function do merg sort recursevly
- * @array: The array
- * @size: The size
- */
-void merge_sort_recursive_tdd(int *array, size_t size)
-{
-	int mid, *lft, *rht;
-
-	if (size < 2)
-		return;
-
-	lft = array;
-	mid = size / 2;
-	rht = array + mid;
-
-	merge_sort_recursive_tdd(lft, mid);
-	merge_sort_recursive_tdd(rht, size - mid);
-
-	printf("Merging...\n");
-	printf("[left]: ");
-	print_array(lft, mid);
-	printf("[right]: ");
-	print_array(rht, size - mid);
-
-	merge_subarray(array, lft, mid, rht, size - mid);
-
-	printf("[Done]: ");
-	print_array(array, size);
-}
-
 /**
  * merge_subarray - Function to merge subarrays into one array
  * @array: The array
@@ -78,4 +46,35 @@ void merge_subarray(int *array, int *lft, int lft_size, int *rht, int rht_size)
 		array[i] = m[i];
 
 	free(m);
+}
+
+/**
+ * merge_sort_recursive_tdd - This function do merg sort recursevly
+ * @array: The array
+ * @size: The size
+ */
+void merge_sort_recursive_tdd(int *array, size_t size)
+{
+	int mid, *lft, *rht;
+
+	if (size < 2)
+		return;
+
+	lft = array;
+	mid = size / 2;
+	rht = array + mid;
+
+	merge_sort_recursive_tdd(lft, mid);
+	merge_sort_recursive_tdd(rht, size - mid);
+
+	printf("Merging...\n");
+	printf("[left]: ");
+	print_array(lft, mid);
+	printf("[right]: ");
+	print_array(rht, size - mid);
+
+	merge_subarray(array, lft, mid, rht, size - mid);
+
+	printf("[Done]: ");
+	print_array(array, size);
 }
