@@ -11,7 +11,7 @@ void merge_sort(int *array, size_t size)
 	if (array == NULL || size < 2)
 		return;
 
-	merge_sort_recursive(array, size);
+	merge_sort_recursive_tdd(array, size);
 }
 
 /**
