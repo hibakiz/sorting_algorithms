@@ -34,7 +34,7 @@ void horae_sort(int *array, int low_dx, int high_dx, size_t size);
 int Horae_partition(int *array, int low, int high, size_t size);
 void counting_sort(int *array, size_t size);
 void merge_sort_recursive_tdd(int *array, size_t size);
-void merge_subarray(int *array, int *left, int left_size, int *right, int right_size);
+void subarr(int *array, int *left, int left_size, int *right, int right_size);
 void merge_sort(int *array, size_t size);
 void heapify(int *arr, int n, int i, size_t size);
 void heap_sort(int *array, size_t size);

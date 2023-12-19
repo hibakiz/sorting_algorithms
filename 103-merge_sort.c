@@ -13,14 +13,14 @@ void merge_sort(int *array, size_t size)
 	merge_sort_recursive_tdd(array, size);
 }
 /**
- * merge_subarray - Function to merge subarrays into one array
+ * subarr - Function to merge subarrays into one array
  * @array: The array
  * @lft: left of array
  * @lft_size: The size of subarray
  * @rht: The right part of subarray
  * @rht_size: The size of rht
  */
-void merge_subarray(int *array, int *lft, int lft_size, int *rht, int rht_size)
+void subarr(int *array, int *lft, int lft_size, int *rht, int rht_size)
 {
 	int i = 0, j = 0, k = 0;
 	int *m = malloc((lft_size + rht_size) * sizeof(int));
@@ -73,7 +73,7 @@ void merge_sort_recursive_tdd(int *array, size_t size)
 	printf("[right]: ");
 	print_array(rht, size - mid);
 
-	merge_subarray(array, lft, mid, rht, size - mid);
+	subarr(array, lft, mid, rht, size - mid);
 
 	printf("[Done]: ");
 	print_array(array, size);
